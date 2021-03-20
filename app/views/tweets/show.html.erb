@@ -4,7 +4,7 @@
       <p class="tweet__heading">
         <%=@tweet.title%>
       </p>
-      <%= link_to "by #{@tweet.user.name}",user_path(@tweet.user), class: :tweet__user %>
+      <%= link_to "by #{@tweet.user.name}", user_path(@tweet.user), class: :tweet__user %>
       <%# プロトタイプの投稿者とログインしているユーザーが同じであれば以下を表示する %>
       <% if current_user == @tweet.user %>
         <div class="tweet__manage">
@@ -26,7 +26,7 @@
         <div class="tweet__detail">
           <p class="detail__title">コンセプト</p>
           <p class="detail__message">
-            <%= "プロトタイプのコンセプト" %>
+            <%= @tweet.concept %>
           </p>
         </div>
       </div>

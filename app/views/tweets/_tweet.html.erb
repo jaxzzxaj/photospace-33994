@@ -8,6 +8,6 @@
       <%= tweet.catch_copy %>
     </p>
     <div class= "card_user">
-    <%= link_to "by #{tweet.user.name}",tweet_path(tweet.user), class: :card__user %>
+    <%= link_to "by #{tweet.user.name}",user_path(tweet.user), class: :card__user %>
   </div>
 </div>
